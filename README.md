@@ -36,5 +36,13 @@ Para utilizar esta app, sigue estos pasos:
 
 7. Para acceder al panel de administración, ingresa a http://127.0.0.1:8000/admin/ y utiliza las credenciales del superusuario creado.
 
+---
+Pagina Principal:
+![Captura de pantalla 2023-11-15 152612](https://github.com/paoladenic/django_avila/assets/126211693/a5679a6e-d069-44e1-a086-6f4088dfa8d2)
+Login de usuario:
+![Captura de pantalla 2023-11-15 152649](https://github.com/paoladenic/django_avila/assets/126211693/0d457a7d-0aad-4eae-8bba-6d86f654137c)
+Catálogo:
+![Captura de pantalla 2023-11-15 152752](https://github.com/paoladenic/django_avila/assets/126211693/2b16f7ca-23cc-4f76-9189-3be022a79564)
 
-![Captura de pantalla 2023-10-18 20821](https://github.com/paoladenic/flask_firestore_avila/assets/126211693/0b313706-6b84-4327-9a07-fbe295957049)
+
+
