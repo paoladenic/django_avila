@@ -1,0 +1,28 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Reserva
+{% endblock %}
+
+{% block content %}
+    <h2>Reserva: <strong>{{ product.name|title }}</strong></h2>
+    <div class="container">
+        <div class="product-details">
+            <p>Categoría: {{ product.category }}</p>
+            <p>Condición: {{ product.condition }}</p>
+            <p>Precio: €{{ product.price }}</p>
+        </div>
+    
+        <form method="post" action="{% url 'tienda:confirmar_reserva' %}">
+            {% csrf_token %}
+            {{ user_info.as_table }}
+            {{ form.as_p }}
+            <button type="submit" class="button">Enviar</button>
+        </form>
+        
+
+    </div>
+    <p><a href="{% url 'tienda:product_list' %}">Volver a la lista de productos</a></p>
+{% endblock %}
+
+

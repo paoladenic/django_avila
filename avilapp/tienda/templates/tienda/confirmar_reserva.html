@@ -1,0 +1,31 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Reserva Exitosa
+{% endblock %}
+
+{% block content %}
+    <h2>Reserva Exitosa</h2>
+    <p>Tu solicitud ha sido recibida con éxito.</p>
+    <p>En breve, nos pondremos en contacto para concertar una visita.</p>
+    <div class="container">
+        <h4>Datos de la Reserva:</h4>
+        <ul>
+            <li><strong>Producto:</strong> {{ product.name }}</li>
+            <li><strong>Categoría:</strong> {{ product.category }}</li>
+            <li><strong>Condición:</strong> {{ product.condition }}</li>
+            <li><strong>Precio:</strong> {{ product.price }}</li>
+            <br\>
+            <li><strong>Mensaje de Reserva:</strong> "Me gustaría reservar este vehículo, concertemos una visita"</li>
+        </ul>
+        <div>
+            <h5>Datos del usuario:</h5>
+            <strong>Nombre del Usuario:</strong> {{ user_info.first_name }}</li>
+            <strong>Apellido del Usuario:</strong> {{ user_info.last_name }}</li>
+            <strong>Email del Usuario:</strong> {{ user_info.email }}</li>
+        </div>
+        <br\>
+    </div>
+    <p><a href="{% url 'tienda:product_list' %}">Volver a la lista de productos</a></p>
+{% endblock %}
+

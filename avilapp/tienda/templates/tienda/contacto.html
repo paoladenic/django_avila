@@ -1,0 +1,42 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Contáctanos 
+{% endblock %}
+
+{% block content %}
+    <h2>Contáctanos</h2>
+    <div class="text-center">
+        <div class="container" style="padding: 20px;">
+            <div class="contact-info">
+                <ul>
+                    <p><a href="https://www.avilabikes.es"><strong>www.avilabikes.es</strong></a></p>
+                    <p><strong>+34 686 71 97 66</strong></p>
+                    <p><strong>info@avilabikes.com</strong></p>
+                    <p><a href="https://www.instagram.com/avilabikesbcn" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" style="max-width: 40px;">
+                    </a></p>
+                    <p><strong>Carrer Proveça 512, Local 1, 08026, Barcelona, España</strong></p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11969.909946094873!2d2.1783706!3d41.4071525!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a36c5bbc953f%3A0x8c53fbe649a3e6aa!2sAvila%20Bikes%20-%20Taller%20de%20bicicleta%20y%20patinete!5e0!3m2!1ses-419!2ses!4v1699649156649!5m2!1ses-419!2ses" 
+                        width="400" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'tienda:product_list' %}" class="button">Regresar</a>
+    {% else %}
+    <a href="{% url 'tienda:homepage' %}" class="button">Regresar</a>
+    {% endif %}
+{% endblock %}
+
+
+

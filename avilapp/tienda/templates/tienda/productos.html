@@ -1,0 +1,31 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Catálogo
+{% endblock %}
+
+{% block content %}
+    <div class="orange-container">
+        <h5>Hola {{ request.user|title }}!</h5>
+    </div>
+    <h2>Catálogo de Productos</h2>
+
+    {% if request.user.is_authenticated %}
+        <div class="card-container">
+            {% for product in products %}
+                <div class="card">
+                    <a href="{% url 'tienda:product_detail' product.pk %}">
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.condition }}</p>
+                        <a href="{% url 'tienda:product_detail' product.pk %}" class="btn btn-primary">+Info</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+

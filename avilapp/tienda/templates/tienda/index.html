@@ -1,0 +1,22 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Bienvenid@ 
+{% endblock %}
+
+{% block content %}
+    <div class="text-center" style="flex-direction: column; justify-content: center;">
+        <h1>Bienvenid@ a Avila Bikes</h1>
+        {% if user.is_authenticated %}
+        <div class="container" style="padding: 20px;">
+            <h4 style="margin-bottom: 20px;">Ventas Privadas</h4>
+            <a href="{% url 'tienda:product_list' %}" class="btn btn-warning">Ver Productos</a>
+        {% else %}
+        <div class="container" style="padding: 20px;">
+            <h4 style="margin-bottom: 20px;">Accede a tu cuenta para ver las ventas privadas</h4>
+            <a href="{% url 'tienda:login' %}" class="btn btn-warning">Iniciar Sesión</a>
+            <a href="{% url 'tienda:register' %}" class="btn btn-secondary">Registrarse</a>
+        </div> 
+        {% endif %}   
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | {{ products.name }} - Detalle del Producto
+{% endblock %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+        <div class="card mx-auto" style="width: 23rem;">
+            <a data-toggle="modal" href="#imageModal">
+                <img src="{{ products.image.url }}" class="card-img-top custom-image" alt="{{ products.name }}">
+            </a>
+            <div class="card-body">
+                <h5 class="card-title">{{ products.name }}</h5>
+                <p class="card-text">Categoría: {{ products.category }}</p>
+                <p class="card-text">Condición: {{ products.condition }}</p>
+                <p class="card-text">{{ products.description1 }}</p>
+                <p class="card-text">{{ products.description2 }}</p>
+                <p class="card-text">{{ products.description3 }}</p>
+                <p class="card-text">{{ products.description4 }}</p>
+                <p class="card-text">{{ products.description5 }}</p>
+                <p class="card-text">{{ products.description6 }}</p>
+                <p class="card-text">Precio: €{{ products.price }}</p>
+            </div>
+            
+            <div class="text-center text-info">
+                <p>Al hacer clic en "Reservar", se enviará una solicitud de reserva para este producto.</p>
+            </div>
+            
+            <form method="post" action="{% url 'tienda:reserva' product_id=products.id %}">
+                {% csrf_token %}
+                <button type="submit" class="button">Reservar</button>
+            </form>
+        </div>
+    {% endif %}
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">{{ products.name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ products.image.url }}" class="img-fluid" alt="{{ products.name }}">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'tienda:product_list' %}" class="btn btn-dark">Volver</a>
+{% endblock %}
+
+
+
+
+

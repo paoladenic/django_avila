@@ -1,0 +1,21 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}
+    Avila Bikes | Inicia Sesión
+{% endblock %}
+
+{% block content %}
+    <h2>Inicia Sesión</h2>
+
+    <div class="col-md-6 offset-md-3">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button type="submit" href="{% url 'tienda:product_list' %}" class="button">Inicia Sesión</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="{% url 'tienda:register' %}">Registrate</a></p>
+    </div>
+{% endblock %}
+
+

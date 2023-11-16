@@ -1,0 +1,130 @@
+html * {
+    font-family: sans-serif;
+}
+
+body {
+    font-family: sans-serif;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    color: #5c5751;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.custom-image {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.orange-container {
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid orange;
+}
+
+.alert {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.product-item {
+    flex: 1;
+    max-width: 30%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: black;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table, .table th, .table td {
+    border: 1px solid black;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.navbar a {
+    color:  orange;
+}
