@@ -3,7 +3,7 @@ Esta aplicación web es una herramienta que permite gestionar las ventas privada
 
 ## Deployment:
 El proyecto se encuentra desplegado en Google Cloud, y esta es la url: 
-**https://flask-todo-399720.ey.r.appspot.com/**
+**https://django-avilapp.oa.r.appspot.com/**
 
 ## Funcionalidades Principales
 - Inicio de Sesión/Registro de usuarios.
